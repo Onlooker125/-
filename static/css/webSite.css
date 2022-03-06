@@ -77,7 +77,7 @@ p {
 }
 /* hero Section */
 #hero {
-  background-image: url(./img/bg2.png); /*设置背景图片*/
+  background-image: url(../../img/bg2.png); /*设置背景图片*/
   background-size: cover; /*设置背景图片大小*/
   background-position: top center; /*为每一个背景图片设置初始位置*/
   position: relative;

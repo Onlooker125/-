@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./static/pageTwo.css">
+    <title>Hi</title>
+</head>
+
+<body>
+    <!--  -->
+    <nav class="navbar">
+        <h1 class="logo">ADVENTURE</h1>
+        <ul class="nav-links">
+            <li class="active"><a href="#"></a>Home</li>
+            <li><a href="#"></a>Tours</li>
+            <li><a href="#"></a>Explore</li>
+            <li><a href="#"></a>About</li>
+            <li class="ctn"><a href="#"></a>Contact</li>
+        </ul>
+        <img src="./img/menuIcon.png" alt="" class="menu-btn">
+    </nav>
+    <header>
+        <div class="header-content">
+            <H1>半 成 主 页</H1>
+            <div class="line"></div>
+            <h1>Hi! Weilcome to my Website</h1>
+            <a href="./component/index.html" class="ctn">Learn More</a>
+        </div>
+    </header>
+    <script>
+        const menuBtn = document.querySelector('.menu-btn');
+        const navlinks = document.querySelector('.nav-links')
+
+        menuBtn.addEventListener('click',()=>{
+            navlinks.classList.toggle('mobile-menu');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="zh">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/pageTwo.css" />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/external-vectorslab-flat-vectorslab/53/000000/external-books-education-vectorslab-flat-vectorslab.png"
+    />
+    <title>BOOKSTORE</title>
+  </head>
+
+  <body>
+    <!-- navbar -->
+    <nav class="navbar">
+      <div class="logo">
+        <h1>BOOK</h1>
+        <h1>STORE</h1>
+      </div>
+      <ul class="nav-links">
+        <li class="active"><a href="../../index.html">Home</a></li>
+        <li><a href="#events-books">Books</a></li>
+        <li><a href="#events-remind">remind</a></li>
+        <!-- <li><a href="#footer">About</a></li> -->
+        <li class="ctn"><a href="#footer">Contact</a></li>
+      </ul>
+      <img src="./assets/img/menuIcon.png" alt="" class="menu-btn" />
+    </nav>
+    <header>
+      <div class="header-content">
+        <h1>Hi,Book club!</h1>
+        <div class="line"></div>
+        <h1>Welcome to my Website</h1>
+        <!-- <a href="./component/index.html" class="ctn">Learn More</a> -->
+      </div>
+    </header>
+    <!-- Events -->
+    <section class="events" id="events-books">
+      <div class="title">
+        <h1>Book</h1>
+        <div class="line"></div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="./assets/img/Untitled1.png" alt="">
+          <h4>你不知道的JavaScripe(上卷)</h4>
+          <p>这是一本非常好的书</p>
+          <a href="./component/untitled1.html" class="ctn">Leave For</a>
+        </div>
+        <div class="col">
+          <img src="./assets/img/Untitled2.png" alt="">
+          <h4>你不知道的JavaScripe(中卷)</h4>
+          <p>这是一本非常好的书</p>
+          <a href="./component/untitled2.html" class="ctn">Leave For</a>
+        </div>
+        <div class="col">
+          <img src="./assets/img/Untitled3.png" alt="">
+          <h4>你不知道的JavaScripe(下卷)</h4>
+          <p>这是一本非常好的书</p>
+          <a href="./component/untitled3.html" class="ctn">Leave For</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col">
+          <img src="./assets/img/CSSWorld.jpg" alt="">
+          <h4>CSS世界</h4>
+          <p>这是一本非常好的书</p>
+          <a href="./component/cssWorld.html" class="ctn">Leave For</a>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <section class="explore" id="events-remind">
+      <div class="explore-content">
+        <h1>LEAVE <p></p> A <p></p> MESSAGE</h1>
+        <div class="line"></div>
+        <div class="explore-text">
+          <p>因着急部署，该页面暂时提供固定书籍，并通过PDF.js浏览方式浏览。</p>
+          <p>更多功能算法之后继续完善.</p>
+          <p>如有需求可联系站长GitHub主页留言</p>
+        </div>
+        <a href="https://github.com/Onlooker125/fwtang" class="ctn">Leave For</a>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <section id="footer">
+      <div class="footer container">
+        <div class="logo" style="margin-top: 0px;">
+          <h1>BOOK</h1>
+          <h1>STORE</h1>
+        </div>
+        <h2>Your Complate Web Solution</h2>
+        <div class="social-icon">
+          <div class="social-item">
+            <a href="#">
+              <img src="https://img.icons8.com/stickers/100/000000/weixing.png"
+            /></a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <img src="https://img.icons8.com/color/48/000000/qq.png"
+            /></a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <img src="https://img.icons8.com/stickers/100/000000/gmail.png" />
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <img
+                src="https://img.icons8.com/stickers/100/000000/youtube.png"
+              />
+            </a>
+          </div>
+          <div class="social-item">
+            <a href="#">
+              <img src="https://img.icons8.com/stickers/100/000000/weibo.png" />
+            </a>
+          </div>
+        </div>
+        <p>@Copyright ©2022 fwtang. All rights reserved</p>
+      </div>
+    </section>
+    <!-- End Footer -->
+    <script>
+      const menuBtn = document.querySelector(".menu-btn")
+      const navlinks = document.querySelector(".nav-links")
+
+      menuBtn.addEventListener("click", () => {
+        navlinks.classList.toggle("mobile-menu")
+      })
+    </script>
+  </body>
+</html>

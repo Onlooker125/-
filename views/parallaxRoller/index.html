@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>滚动视差</title>
+  </head>
+  <body>
+    <h1>Roller Parallax</h1>
+    <div class="header"><span>GOAT</span></div>
+    <h2>
+      滚动视差：通过<span style="color: crimson;">-webkit-background-clip</span>设置元素的背景色，将字体和图片融合，之后通过伪元素将背景图显示形成视觉差。最后Js更改文字<span style="color: crimson;">backgroundPosition</span>，通过<span style="color: crimson;">calc()</span>在声明CSS属性值时执行一些计算，最终完成效果。
+    </h2>
+    <script>
+      const header = document.querySelector(".header")
+      document.addEventListener("scroll", () => {
+        const scrollY = window.scrollY
+        if (scrollY !== 0) {
+          header.style.backgroundPosition = `calc(50% + ${scrollY}px) calc(50% + ${scrollY}px)`
+        } else {
+          header.style.backgroundPosition = ""
+        }
+      })
+    </script>
+  </body>
+</html>

@@ -1,0 +1,112 @@
+body {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(119 157 193);
+}
+.card {
+  position: relative;
+  top: 50px;
+  width: 1000px;
+  height: 600px;
+  background-image: url(../img/backgroundImg3.jpg);
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.left-a,
+.left-b,
+.right-a,
+.right-b {
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  /* 设置阴影 */
+  filter: drop-shadow(4px 4px 12px rgba(0, 0, 0, 0.5));
+  background-size: cover;
+  opacity: 0.7;
+  transition: 1s;
+}
+.left-a::after,
+.left-b::after,
+.right-a::after,
+.right-b::after {
+  content: "";
+  position: absolute;
+  width: 1000px;
+  height: 600px;
+  background-image: url(../img/backgroundImg3.jpg);
+  /* background-color: white; */
+  /* opacity: 0.38; */
+}
+.left-a{
+  left:-400px;
+  transform: rotateZ(100deg);
+  overflow: hidden;
+}
+.left-a::after{
+  transform: rotateZ(-100deg);
+}
+
+.left-b{
+  left:-400px;
+  transform: rotateZ(-100deg);
+  overflow: hidden;
+}
+.left-b::after{
+  transform: rotateZ(100deg);
+}
+
+.right-a{
+  right:-400px;
+  transform: rotateZ(100deg);
+  overflow: hidden;
+}
+.right-a::after{
+  transform: rotateZ(-100deg);
+}
+
+.right-b{
+  right:-400px;
+  transform: rotateZ(-100deg);
+  overflow: hidden;
+}
+.right-b::after{
+  transform: rotateZ(100deg);
+}
+.title{
+  opacity: 0;
+  font: 900 50px;
+  /* 设置字体间距 */
+  letter-spacing: 10px;
+  color: rgb(69, 69, 70);
+  transition: 1.5s;
+}
+/* 设置动画 */
+.card:hover .left-a{
+  left: -570px;
+}
+.card:hover .left-b{
+  left: -610px;
+}
+.card:hover .right-a{
+  right: -570px;
+}
+.card:hover .right-b{
+  right: -610px;
+}
+.card:hover .title{
+  opacity: 1;
+}
+.ending{
+  position: absolute;
+  letter-spacing: 2px;
+  top: 100vh;
+  width: 60%;
+  color: #fff;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 30px;
+  background-color: rgba(0, 0, 0, .3);
+}

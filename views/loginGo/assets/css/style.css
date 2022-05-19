@@ -1,0 +1,276 @@
+* {
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+body {
+  /* background-image: ; */
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+.bg-video {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10;
+  object-fit: cover;
+}
+.bg-image {
+  display: none;
+  z-index: -9;
+}
+.hint-login {
+  width: 0;
+  height: 0;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  right: -100%;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  transition: 1s ease;
+  font-size: 0.8rem;
+  padding-left: 10px;
+  z-index: 111;
+}
+.hint-login-active {
+  width: 300px;
+  height: 50px;
+  background-color: #fff;
+  border-radius: 10px;
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  display: flex;
+  align-items: center;
+  animation: hintLogin 0.4s ease;
+  font-size: 0.8rem;
+  padding-left: 10px;
+}
+.hint-login img,
+.hint-login-active img {
+  width: 36px;
+  height: 36px;
+}
+.hint-login span,
+.hint-login-active span {
+  padding-left: 10px;
+  font-weight: 600;
+}
+.dialog {
+  width: 400px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  position: absolute;
+  left: -400px;
+  animation: login_dialog 1s ease forwards; /* 定义关键帧 */
+  animation-delay: 0.5s; /* 延时1s */
+}
+.dialog .content {
+  width: 98%;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  overflow-y: hidden;
+  align-items: center;
+}
+.content h1 {
+  font-size: 3rem;
+  letter-spacing: 1rem;
+  color: #d0104c;
+}
+.content .input-box {
+  height: 190px;
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.content .input-box input {
+  letter-spacing: 0.1rem;
+}
+.content .input-box input::placeholder{
+  color: rgb(46, 46, 46);
+}
+.content .input-box .user,
+.content .input-box .password {
+  width: 300px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0);
+  border: none;
+  border-bottom: 1px solid #cb1b45;
+  padding-left: 40px;
+  margin-bottom: 20px;
+}
+.content .input-box .user {
+  width: 320px;
+  background-image: url("https://img.icons8.com/fluency-systems-regular/29/000000/user.png");
+  background-repeat: no-repeat;
+  background-position: 6px 5px;
+  outline: none;
+  transition: 0.2s;
+}
+.content .input-box .password {
+  width: 320px;
+  background-image: url(../img/password.png);
+  background-size: 24px;
+  background-repeat: no-repeat;
+  background-position: 7px 7px;
+  outline: none;
+  transition: 0.4s ease;
+}
+.content .input-box .user:focus,
+.content .input-box .password:focus {
+  padding: 40px 10px 10px 10px;
+  border: 4px solid #cb1b45;
+  transition: 0.2s ease;
+}
+.content .input-box .ispassword-visible,
+.content .input-box .ispassword-hidden {
+  position: absolute;
+  padding: 16px 0 0 0;
+  margin-left: 10px;
+  cursor: pointer;
+  display: none;
+}
+.content .input-box .ispassword-visible.active {
+  display: inline;
+}
+.content .input-box .ispassword-hidden.active {
+  display: inline;
+}
+.content .login {
+  width: 360px;
+  display: flex;
+  justify-content: flex-end;
+}
+.content .login .login-go {
+  width: 60px;
+  height: 60px;
+  border: 0;
+  background-color: #cb1b45;
+  font-size: 1.6rem;
+  color: #fff;
+}
+@keyframes login_dialog {
+  from {
+  }
+  to {
+    width: 700px;
+    left: 0;
+  }
+}
+@keyframes hintLogin {
+  from {
+    right: -300px;
+  }
+  to {
+    right: 10px;
+  }
+}
+@keyframes login_dialog_ipad {
+  from {
+  }
+  to {
+    width: 500px;
+    left: 0;
+  }
+}
+@keyframes login_dialog_phone {
+  from {
+  }
+  to {
+    width: 100%;
+    left: 0;
+  }
+}
+
+@media only screen and (max-width: 1180px) {
+  body {
+    display: flex;
+    justify-content: flex-end;
+  }
+  .bg-video {
+    position: static;
+    width: 0;
+    height: 0;
+    z-index: -111;
+  }
+  .bg-image {
+    display: block;
+    background-image: url("../img/ipad_bg_img.jpg");
+    background-size: cover;
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+  }
+  .dialog {
+    width: 300px;
+    animation: login_dialog_ipad 1s ease forwards;
+  }
+  .dialog .content {
+    width: 600%;
+    /* height: 100%; */
+  }
+  .content .input-box input {
+    font-size: 1.1rem;
+  }
+  .content .login .login-go {
+    width: 80%;
+    margin: 0 auto;
+  }
+}
+@media only screen and (max-width: 440px) {
+  html {
+    overflow: hidden;
+  }
+  .bg-video {
+    position: static;
+    width: 0;
+    height: 0;
+    z-index: -111;
+  }
+  .bg-image {
+    display: block;
+    background-image: url("../img/phone_bg_img.jpg");
+    background-size: cover;
+    position: fixed;
+  }
+  .hint-login span,
+  .hint-login-active span {
+    font-size: 1.1rem;
+    font-weight: 400;
+  }
+  .dialog {
+    padding-top: 40px;
+    width: 200px;
+    animation: login_dialog_phone 1s ease forwards;
+  }
+  .dialog .content {
+    width: 100%;
+    height: 100%;
+    transform: scale(0.9);
+  }
+  .content h1 {
+    font-size: 2.6rem;
+  }
+  .content .input-box input {
+    font-size: 1.1rem;
+  }
+  .content .input-box .user,
+  .content .input-box .password {
+    width: 270px;
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0);
+  }
+  .content .login .login-go {
+    width: 80%;
+    margin: 0 auto;
+  }
+}

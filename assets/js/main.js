@@ -25,3 +25,33 @@ menu_item.forEach((item) => {
     mobile_menu.classList.toggle("active")
   })
 })
+
+/** 作品集轮播图 **/
+var swiper = new Swiper(".mySwiper", {
+  effect: "cube",
+  grabCursor: true,
+  loop: true,
+  cubeEffect: {
+    shadow: true,
+    slideShadows: true,
+    shadowOffset: 20,
+    shadowScale: 0.94
+  },
+  pagination: {
+    el: ".swiper-pagination"
+  }
+})
+
+/** login弹窗 弃用，换成连接形式*/
+// var loginDialog = document.getElementById('loginDialog')
+// var goLogin = document.getElementById('goLogin')
+// var shade = document.getElementById('shade')
+// goLogin.addEventListener('click', () => {
+//   loginDialog.classList.toggle('active')
+//   shade.classList.toggle('active')
+// })
+// shade.addEventListener('click', () => {
+//   loginDialog.classList.toggle('active')
+//   shade.classList.toggle('active')
+// })
+/** 以上END */

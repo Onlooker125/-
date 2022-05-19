@@ -33,10 +33,29 @@ p {
   font-weight: 300;
   letter-spacing: 0.05rem; /* 字符间距 */
 }
+/* 轮播图 */
+.swiper {
+  width: 700px;
+  height: 400px;
+}
+.temp-background {
+  background-color: rgba(0, 0, 0, 1);
+  width: 100%;
+  height: 100%;
+  z-index: 111;
+}
+.swiper-slide {
+  background-position: center;
+  background-size: cover;
+}
+.swiper-slide img {
+  display: block;
+  width: 100%;
+}
+
 .section-title {
   font-size: 4rem;
   font-weight: 300;
-  /* color: ; */
   margin-bottom: 10px;
   text-transform: uppercase;
   letter-spacing: 0.2rem;
@@ -59,6 +78,7 @@ p {
   margin-top: 30px;
   transition: 0.3s ease; /*过渡效果*/
   transition-property: background-color, color; /*应用过度属性的名称*/
+  cursor: pointer;
 }
 .cta:hover {
   color: white;
@@ -296,10 +316,11 @@ p {
   margin-top: 50px;
 }
 #services .service-item {
+  height: 240px;
   flex-basis: 80%; /* 指定flex元素在主轴方向上的初始大小 */
   display: flex;
   align-items: flex-start;
-  justify-content: center;
+  justify-content: flex-start;
   flex-direction: column;
   padding: 30px;
   border-radius: 10px;
@@ -309,6 +330,12 @@ p {
   position: relative;
   z-index: 1;
   overflow: hidden;
+}
+#services .service-item .icon {
+  margin-bottom: 10px;
+}
+#services .book-store {
+  background-image: url(../img/bookstore.jpg);
 }
 #services .service-item::after {
   content: "";
@@ -437,10 +464,12 @@ p {
   margin-bottom: 20px;
 }
 #about .col-right .cta {
+  width: 300px;
   color: black;
   margin-bottom: 50px;
   padding: 10px 20px;
   font-size: 2rem;
+  text-align: center;
 }
 #about .col-left .about-img {
   height: 100%;
@@ -459,6 +488,40 @@ p {
   z-index: -1;
 }
 /* End About section */
+
+/* Login Dialog 已经弃用，换成链接*/
+/* .login-shade {
+  width: 100vw;
+  height: 100vh;
+  background-color: #bbbbbb;
+  overflow: visible;
+  opacity: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease;
+  z-index: -2;
+}
+.login-shade.active {
+  overflow: hidden;
+  opacity: 0.6;
+  z-index: 1;
+}
+.login-dialog {
+  height: 100%;
+  width: 460px;
+  background-color: aquamarine;
+  position: fixed;
+  left: 90%;
+  top: -40%;
+  margin-top: 350px;
+  transition: 0.5s ease left;
+  z-index: 2;
+}
+.login-dialog.active {
+  left: 72%;
+} */
+/* End Login Dialog 弃用*/
 
 /* contact Section */
 #contact .contact {
@@ -578,13 +641,24 @@ p {
 }
 
 /* Media Query For Tablet */
-@media only screen and (max-width:415px){
+@media only screen and (max-width: 415px) {
   .brand h1 {
     font-size: 2.6rem;
   }
-  #hero .hero div{
+  #hero .hero div {
     padding-top: 440px;
   }
+}
+@media only screen and (max-width: 1200px) {
+  /* 登录框，已经换成链接 */
+  .login-dialog {
+    width: 100%;
+    height: 100%;
+  }
+  .login-dialog.active {
+    left: 0;
+  }
+  /* 以上END */
 }
 @media only screen and (min-width: 768px) {
   .cta {

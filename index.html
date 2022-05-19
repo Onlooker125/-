@@ -9,6 +9,13 @@
       rel="icon"
       href="https://img.icons8.com/stickers/100/000000/cat.png"
     />
+
+    <!-- ========================== SWIPER CSS ============================== -->
+    <!-- <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" /> -->
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <title>My Website</title>
   </head>
   <body>
@@ -19,8 +26,7 @@
           <div class="brand">
             <a href="#hero">
               <div class="brand">
-                <h1>HYY && </h1>
-                <!-- <h2>&&</h2> -->
+                <h1>HYY &&</h1>
                 <h1>Fwtang</h1>
               </div>
             </a>
@@ -47,7 +53,7 @@
           <h1>Hi,<span></span></h1>
           <h1>Welcome To My<span></span></h1>
           <h1>Website<span></span></h1>
-          <a href="#" type="button" class="cta">Portfolio</a>
+          <a href="#services" type="button" class="cta">Portfolio</a>
         </div>
       </div>
     </section>
@@ -57,31 +63,28 @@
     <section id="services">
       <div class="services container">
         <dig class="service-top">
-          <h1 class="section-title">施工<span>中</span>...</h1>
-          <p>
-            Welcome to my Website, the current web page is under construction,
-            please calm down!
-          </p>
+          <h1 class="section-title">作品<span>集</span>...</h1>
+          <p>存放一些练习项目和网页等。点击以进行跳转</p>
         </dig>
         <div class="service-bottom">
-          <div class="service-item">
+          <div
+            class="service-item book-store"
+            onclick="window.location.href='./views/bookStore/index.html'"
+          >
             <!-- icon图片网站来自icons8.com -->
             <div class="icon">
               <img
-                src="https://img.icons8.com/external-vitaliy-gorbachev-lineal-color-vitaly-gorbachev/60/000000/external-flower-gardening-vitaliy-gorbachev-lineal-color-vitaly-gorbachev.png"
+                src="https://img.icons8.com/color/60/000000/storytelling.png"
               />
             </div>
-            <h2>Under Construction...</h2>
-            <p>
-              Welcome to my Website, the current web page is under construction,
-              please calm down!
-            </p>
+            <h2>BookStore</h2>
+            <p>图书商店-存放站长各种前端相关书籍，提供便捷阅读</p>
           </div>
           <div class="service-item">
             <!-- 图片网站来自icons8.com -->
             <div class="icon">
               <img
-                src="https://img.icons8.com/external-soft-fill-juicy-fish/60/000000/external-build-coding-and-development-soft-fill-soft-fill-juicy-fish.png"
+                src="https://img.icons8.com/color/60/000000/bridal-bouquet.png"
               />
             </div>
             <h2>Under Construction...</h2>
@@ -118,9 +121,31 @@
           </div>
         </div>
       </div>
+      <h1 class="section-title" style="transform: scale(0.7)">
+        <span>小 </span>Demo
+      </h1>
+      <div class="mySwiper swiper">
+        <div class="swiper-wrapper temp-background">
+          <!-- ================ DISCOVER 1 ================= -->
+          <div
+            class="swiper-slide"
+            onclick="window.location.href='./views/parallaxBusinessCard/index.html'"
+          >
+            <img src="./assets/img/parallaxBusinessCard.png" alt="" />
+          </div>
+          <!-- ================ DISCOVER 2 ================= -->
+          <div
+            class="swiper-slide"
+            onclick="window.location.href='./views/parallaxRoller'"
+          >
+            <img src="./assets/img/parallaxRoller.png" alt="" />
+          </div>
+        </div>
+        <!-- 如果需要滚动条 -->
+        <div class="swiper-pagination"></div>
+      </div>
     </section>
     <!-- End Service Section -->
-
     <!-- Projects Section -->
     <section id="projects">
       <div class="projects container">
@@ -208,27 +233,30 @@
         <div class="col-right">
           <h1 class="section-title">About <span>ME</span></h1>
           <h2>Front End Developer</h2>
-          <p></p>
+          <p>--</p>
           <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit.
-            Asperiores, velit alias eius non i1lum beatae atque repellat ratione
-            qui veritatis repudiandae adipisci maiores. At inventore
-            necessitatibus deserunt exercitationem cumque earum omnis ipsum rem
-            accusantium quis, quas quia, accusamus provident suscipit magni!
-            Expedita sint ad dolore, commodi labore nihil velit earum ducimus
-            nulla quae nostrum fugit aut, deserunt reprehenderit libero enius
-            non i1lum beatae atque repellat ratione qui veritatis repudiandae
-            adipisci maiores. At inventore necessitatibus deserunt
-            exercitationem cumque earum omnis ipsum rem accusantium quis, quas
-            quia, accusamus provident suscipit magni! Expedita sint ad dolore,
-            commodi labore nihil velit earum ducimus nulla quae nostrum fugit
-            aut, deserunt reprehenderit libero enim!
+            因小作者无能，网站为纯前端页面并不参与后端项目。图片、文件均以本地的形式存储和读取，之后会通过业余时间持续完善。
           </p>
-          <a href="#" class="cta">Download Resume</a>
+          <p>
+            页面基本上通过原生HTML、CSS、JavaScript来实现页面排版、美化、动效、跳转等功能，也利用相关组件快捷实现一些功能。之所以不使用Vue等火热框架，是因为想更多接触JavaScript原生写法，来更熟悉底层知识。
+          </p>
+          <p>
+            网页跳转的页面部分是自己学习时的demo，如有需要可按照下个section上的联系方式联系作者。当然demo也有可能会有很多不足的地方，同时也欢迎指正互相学习！
+          </p>
+          <p>
+            下方Go是准备表白女友的页面，需要登陆，所以恕不能分享。如有需要当然也可联系小站长！
+          </p>
+          <!-- <p href="" class="cta" id="goLogin">Go...</p> -->
+          <a href="./views/loginGo/index.html" class="cta">Go...</a>
         </div>
       </div>
     </section>
+    
     <!-- End About Section -->
+    <!-- Login Dialog 弃用，换成链接形式-->
+    <!-- <div class="login-shade" id="shade"></div>
+    <div class="login-dialog" id="loginDialog"></div> -->
+    <!-- End Login Dialog -->
 
     <!-- Contact Section -->
     <section id="contact">
@@ -246,7 +274,7 @@
             <div class="contact-info">
               <h1>Phone</h1>
               <h2>+86 176 0594 9735</h2>
-              <h2>+86 176 8990 4492</h2>
+              <h2>+86 176 * * * * 4492</h2>
             </div>
           </div>
           <div class="contact-item">
@@ -282,7 +310,7 @@
     <section id="footer">
       <div class="footer container">
         <div class="brand">
-          <h1>HYY && </h1>
+          <h1>HYY &&</h1>
           <h1>FWTANG</h1>
         </div>
         <h2>Your Complate Web Solution</h2>
@@ -318,6 +346,11 @@
         <p>@Copyright ©2022 fwtang. All rights reserved</p>
       </div>
     </section>
+    <!-- ========================== SWIPER JS ============================== -->
+    <!-- <script src="./assets/js/swiper-bundle.min.js"></script> -->
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
     <!-- End Footer -->
     <script src="./assets/js/main.js"></script>
   </body>

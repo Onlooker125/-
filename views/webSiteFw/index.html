@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <!-- ========================== FAVICON ============================== -->
-
+    <link
+      rel="icon"
+      href="https://img.icons8.com/color/60/000000/bridal-bouquet.png"
+    />
     <!-- ========================== REMIX ICONS ============================== -->
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css"
@@ -15,7 +17,7 @@
     <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
     <!-- ========================== CSS ============================== -->
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>WebSite</title>
+    <title>Hyy&&fwTang</title>
   </head>
   <body>
     <header class="header" id="header">
@@ -25,7 +27,7 @@
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link">Home</a>
+              <a href="#home" class="nav__link active-link">Home</a>
             </li>
             <li class="nav__item">
               <a href="#about" class="nav__link">About</a>
@@ -42,7 +44,19 @@
             <li class="nav__item">
               <a href="#place" class="nav__link">Place</a>
             </li>
+            <li class="nav__item">
+              <a href="#subscribe" class="nav__link">Subscribe</a>
+            </li>
+            <li class="nav__item">
+              <a href="#sponsor" class="nav__link">Sponsor</a>
+            </li>
           </ul>
+
+          <!-- 主题色切换 -->
+          <div class="nav__dark">
+            <span class="change-theme-name">Dark mode</span>
+            <i class="ri-moon-line change-theme" id="theme-button"></i>
+          </div>
 
           <i class="ri-close-line nav__close" id="nav-close"></i>
         </div>
@@ -65,7 +79,6 @@
             </h1>
             <a href="#" class="button">Explore</a>
           </div>
-
           <div class="home__social">
             <a href="https://www.facebook.com/" class="home__social-link"
               ><i class="ri-facebook-box-fill"></i
@@ -77,7 +90,6 @@
               ><i class="ri-twitter-fill"></i
             ></a>
           </div>
-
           <div class="home__info">
             <div>
               <span class="home__info-title">5 best places to visit</span>
@@ -326,7 +338,7 @@
         </div>
       </section>
       <!-- ================ SUBSCRIBE ================== -->
-      <section class="subscribe section">
+      <section class="subscribe section" id="subscribe">
         <div class="subscribe__bg">
           <div class="subscribe__content">
             <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
@@ -339,7 +351,7 @@
         </div>
       </section>
       <!-- ================== SPONSORS ================ -->
-      <section class="sponsor section">
+      <section class="sponsor section" id="sponsor">
         <div class="sponsor__container container grid">
           <div class="sponsor__content">
               <img src="https://img.icons8.com/stickers/100/000000/weixing.png" alt="" class="sponsor__img">
@@ -398,9 +410,19 @@
             </ul>
           </div>
         </div>
+        <div class="footer__rights">
+          <p class="footer__copy">&#169; 2022 fwtang.All rigths reserved</p>
+          <div class="footer__terms">
+            <a href="#" class="footer__terms-link">Terms & Agreements</a>
+            <a href="#" class="footer__terms-link">Privacy Policy</a>
+          </div>
+        </div>
       </div>
     </footer>
     <!-- ========================== SCROLL UP ============================== -->
+    <a href="#" class="scrollup" id="scroll-up">
+      <i class="ri-arrow-up-line scrollup__icon"></i>
+    </a>
 
     <!-- ========================== SCROLL REVEAL ============================== -->
 

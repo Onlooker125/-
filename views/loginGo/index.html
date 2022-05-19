@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- #以上代码告诉IE浏览器，IE8/9及以后的版本都会以最高版本IE来渲染页面。   -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="icon"
+      href="https://img.icons8.com/color/60/000000/bridal-bouquet.png"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <title>欢迎</title>
+  </head>
+  <body>
+    <!-- pc端地址 -->
+    <!-- https://player.vimeo.com/external/394806363.sd.mp4?s=dfe056adfd8429c24c53439417505d925c2ab65c&profile_id=139&oauth2_token_id=57447761 -->
+    <!-- ipad地址 -->
+    <!--  -->
+    <!-- 移动端地址 -->
+    <!-- https://player.vimeo.com/external/546429864.sd.mp4?s=894f9db8f019e91c8eee9260269166a89f13ca1b&profile_id=165&oauth2_token_id=57447761 -->
+    <video
+      autoplay
+      loop
+      muted
+      src="./assets/video/pc_bg_video.mp4"
+      class="bg-video"
+    ></video>
+    <div class="bg-image"></div>
+    <!-- 登录提示弹出框 -->
+    <div class="hint-login" id="hintLogin">
+      <img src="./assets/img/error.gif" alt="" />
+      <span id="hintLoginText"></span>
+    </div>
+    <!-- End 登录提示弹出框 -->
+    <!-- loginDialog -->
+    <div class="dialog">
+      <div class="content">
+        <img src="https://img.icons8.com/color/96/000000/bridal-bouquet.png" />
+        <h1>欢迎</h1>
+        <div class="input-box">
+          <input
+            type="text"
+            class="user"
+            placeholder="请输入账号"
+            id="user-input"
+          />
+          <div>
+            <input
+              type="password"
+              class="password"
+              placeholder="请输入密码"
+              id="password-input"
+            />
+            <img
+              src="./assets/img/noEyes.png"
+              alt=""
+              class="ispassword-visible active"
+              id="ispasswordVisible"
+            />
+            <img
+              src="./assets/img/eyes.png"
+              alt=""
+              class="ispassword-hidden"
+              id="ispasswordHidden"
+            />
+          </div>
+        </div>
+        <div class="login">
+          <button class="login-go" id="login-go">Go</button>
+        </div>
+      </div>
+    </div>
+  </body>
+  <script src="./assets/js/main.js"></script>
+</html>

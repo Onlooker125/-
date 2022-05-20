@@ -14,7 +14,10 @@
       rel="stylesheet"
     />
     <!-- ========================== SWIPER CSS ============================== -->
-    <link rel="stylesheet" href="./assets/css/swiper-bundle.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/swiper/swiper-bundle.min.css"
+    />
     <!-- ========================== CSS ============================== -->
     <link rel="stylesheet" href="./assets/css/style.css" />
     <title>Hyy&&fwTang</title>
@@ -22,45 +25,32 @@
   <body>
     <header class="header" id="header">
       <nav class="nav container">
-        <a href="#" class="nav__logo">Travel</a>
-
+        <a href="#" class="nav__logo">Dreamboat</a>
         <div class="nav__menu" id="nav-menu">
           <ul class="nav__list">
             <li class="nav__item">
-              <a href="#home" class="nav__link active-link">Home</a>
+              <a href="#home" class="nav__link active-link">首 页</a>
             </li>
             <li class="nav__item">
-              <a href="#about" class="nav__link">About</a>
+              <a href="#about" class="nav__link">关 于</a>
             </li>
             <li class="nav__item">
-              <a href="#discover" class="nav__link">Discover</a>
+              <a href="#discover" class="nav__link">相 册</a>
             </li>
             <li class="nav__item">
-              <a href="#experience" class="nav__link">Experience</a>
+              <a href="#experience" class="nav__link">回 忆</a>
             </li>
             <li class="nav__item">
-              <a href="#video" class="nav__link">Video</a>
-            </li>
-            <li class="nav__item">
-              <a href="#place" class="nav__link">Place</a>
-            </li>
-            <li class="nav__item">
-              <a href="#subscribe" class="nav__link">Subscribe</a>
-            </li>
-            <li class="nav__item">
-              <a href="#sponsor" class="nav__link">Sponsor</a>
+              <a href="#video" class="nav__link">视 频</a>
             </li>
           </ul>
-
           <!-- 主题色切换 -->
           <div class="nav__dark">
             <span class="change-theme-name">Dark mode</span>
             <i class="ri-moon-line change-theme" id="theme-button"></i>
           </div>
-
           <i class="ri-close-line nav__close" id="nav-close"></i>
         </div>
-
         <div class="nav__toggle" id="nav-toggle">
           <i class="ri-function-line"></i>
         </div>
@@ -69,25 +59,33 @@
     <main class="main">
       <!-- ================= HOME ==================== -->
       <section class="home" id="home">
-        <img src="./assets/img/home.jpg" alt="" class="home__img" />
+        <!-- <img src="./assets/img/home.jpg" alt="" class="home__img" /> -->
+        <video
+          src="./assets/video/indexVideo.mp4"
+          autoplay
+          loop
+          muted
+          class="home__img"
+        ></video>
         <div class="home__container container grid">
           <div class="home__data">
-            <span class="home__data-subtitle">Discover your place</span>
+            <span class="home__data-subtitle">02.19</span>
             <h1 class="home__data-title">
-              Explore The <br />
-              Best <b>Beautiful <br />Beaches</b>
+              See you<br />
+              Tomorrow <b> the <br />Dreamboat :)</b>
             </h1>
-            <a href="#" class="button">Explore</a>
+            <a href="#about" class="button">出 发</a>
           </div>
           <div class="home__social">
-            <a href="https://www.facebook.com/" class="home__social-link"
-              ><i class="ri-facebook-box-fill"></i
+            <a
+              href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1752809438"
+              target="class"
+              class="home__social-link"
+              ><i class="ri-qq-fill"></i
             ></a>
-            <a href="https://www.instagram.com/" class="home__social-link"
-              ><i class="ri-instagram-fill"></i
-            ></a>
-            <a href="https://twitter.com/" class="home__social-link"
-              ><i class="ri-twitter-fill"></i
+            <i id="wechat" class="ri-wechat-fill home__social-link"></i>
+            <a href="mailto:1752809438@qq.com" class="home__social-link"
+              ><i class="ri-mail-unread-fill"></i
             ></a>
           </div>
           <div class="home__info">
@@ -106,11 +104,21 @@
           </div>
         </div>
       </section>
+
+      <!-- ============= WECHAT DIALOG ================ -->
+      <div class="wechat" id="wechatDialog">
+        <div class="dialog">
+          <img src="./assets/img/wechat.jpg" alt="" />
+        </div>
+      </div>
+
       <!-- ================= ABOUT =================== -->
       <section class="about section" id="about">
         <div class="about__container container grid">
           <div class="about__data">
             <h2 class="section__title about__title">
+              <!-- ABOUT YOU <br />
+              About The Best Beaches -->
               More Information <br />
               About The Best Beaches
             </h2>
@@ -127,7 +135,7 @@
               <img src="./assets/img/img2.png" alt="" class="about__img-one" />
             </div>
             <div class="about__img-overlay">
-              <img src="./assets/img/img1.png" alt="" class="about__img-two" />
+              <img src="./assets/img/img1.jpg" alt="" class="about__img-two" />
             </div>
           </div>
         </div>
@@ -138,41 +146,8 @@
           Discove this most <br />
           attractive places
         </h2>
-        <div class="discover__container container swiper-container">
-          <div class="swiper-wrapper">
-            <!-- ================ DISCOVER 1 ================= -->
-            <div class="discover__card swiper-slide">
-              <img src="./assets/img/discover1.jpg" alt="" />
-              <div class="discover__data">
-                <h2 class="discover__title">Bali</h2>
-                <span class="discover__description">24 tours available</span>
-              </div>
-            </div>
-            <!-- ================ DISCOVER 2 ================= -->
-            <div class="discover__card swiper-slide">
-              <img src="./assets/img/discover2.jpg" alt="" />
-              <div class="discover__data">
-                <h2 class="discover__title">Hawaii</h2>
-                <span class="discover__description">15 tours available</span>
-              </div>
-            </div>
-            <!-- ================ DISCOVER 3 ================= -->
-            <div class="discover__card swiper-slide">
-              <img src="./assets/img/discover3.jpg" alt="" />
-              <div class="discover__data">
-                <h2 class="discover__title">Hvar</h2>
-                <span class="discover__description">18 tours available</span>
-              </div>
-            </div>
-            <!-- ================ DISCOVER 4 ================= -->
-            <div class="discover__card swiper-slide">
-              <img src="./assets/img/discover4.jpg" alt="" />
-              <div class="discover__data">
-                <h2 class="discover__title">Whitehaven</h2>
-                <span class="discover__description">32 tours available</span>
-              </div>
-            </div>
-          </div>
+        <div class="swiper discover__container container swiper-container">
+          <div class="swiper-wrapper" id="wrapper"></div>
         </div>
       </section>
       <!-- =============== EXPERIENCE ================ -->
@@ -233,7 +208,7 @@
           </p>
           <div class="video__content">
             <video id="video-file">
-              <source src="./assets/video/video.mp4" type="video/mp4" />
+              <source src="./assets/video/bao.mp4" type="video/mp4" />
             </video>
             <button class="button button--flex video__button" id="video-button">
               <i class="ri-play-line video__button-icon" id="video-icon"></i>
@@ -241,194 +216,99 @@
           </div>
         </div>
       </section>
-      <!-- ================= PLACES ================== -->
-      <section class="place section" id="place">
-        <h2 class="section__title">Choose Your Place</h2>
-        <div class="place__container container grid">
-          <!-- ================= PLACES CARD 1 ================= -->
-          <div class="place__card">
-            <img src="./assets/img/place.jpg" alt="" class="place__img" />
-            <div class="place__content">
-              <span class="place__rating">
-                <i class="ri-star-line place__rating-icon"></i>
-                <span class="place__rating-number">4,8</span>
-              </span>
-              <div class="place__data">
-                <h3 class="place__title">Bali</h3>
-                <span class="place__subtitle">Indonesia</span>
-                <span class="place__price">$2499</span>
-              </div>
-              <button class="button button--flex place__button">
-                <i class="ri-arrow-right-line"></i>
-              </button>
-            </div>
-          </div>
-          <!-- ================= PLACES CARD 2 ================= -->
-          <div class="place__card">
-            <img src="./assets/img/place2.jpg" alt="" class="place__img" />
-            <div class="place__content">
-              <span class="place__rating">
-                <i class="ri-star-line place__rating-icon"></i>
-                <span class="place__rating-number">5.7</span>
-              </span>
-              <div class="place__data">
-                <h3 class="place__title">Bali</h3>
-                <span class="place__subtitle">Indonesia</span>
-                <span class="place__price">$2699</span>
-              </div>
-              <button class="button button--flex place__button">
-                <i class="ri-arrow-right-line"></i>
-              </button>
-            </div>
-          </div>
-          <!-- ================= PLACES CARD 3 ================= -->
-          <div class="place__card">
-            <img src="./assets/img/place3.jpg" alt="" class="place__img" />
-            <div class="place__content">
-              <span class="place__rating">
-                <i class="ri-star-line place__rating-icon"></i>
-                <span class="place__rating-number">5.7</span>
-              </span>
-              <div class="place__data">
-                <h3 class="place__title">Bali</h3>
-                <span class="place__subtitle">Indonesia</span>
-                <span class="place__price">$3699</span>
-              </div>
-              <button class="button button--flex place__button">
-                <i class="ri-arrow-right-line"></i>
-              </button>
-            </div>
-          </div>
-          <!-- ================= PLACES CARD 4 ================= -->
-          <div class="place__card">
-            <img src="./assets/img/place4.jpg" alt="" class="place__img" />
-            <div class="place__content">
-              <span class="place__rating">
-                <i class="ri-star-line place__rating-icon"></i>
-                <span class="place__rating-number">2.7</span>
-              </span>
-              <div class="place__data">
-                <h3 class="place__title">Bali</h3>
-                <span class="place__subtitle">Indonesia</span>
-                <span class="place__price">$2299</span>
-              </div>
-              <button class="button button--flex place__button">
-                <i class="ri-arrow-right-line"></i>
-              </button>
-            </div>
-          </div>
-          <!-- ================= PLACES CARD 5 ================= -->
-          <div class="place__card">
-            <img src="./assets/img/place5.jpg" alt="" class="place__img" />
-            <div class="place__content">
-              <span class="place__rating">
-                <i class="ri-star-line place__rating-icon"></i>
-                <span class="place__rating-number">4.1</span>
-              </span>
-              <div class="place__data">
-                <h3 class="place__title">Bali</h3>
-                <span class="place__subtitle">Indonesia</span>
-                <span class="place__price">$1499</span>
-              </div>
-              <button class="button button--flex place__button">
-                <i class="ri-arrow-right-line"></i>
-              </button>
-            </div>
-          </div>
-        </div>
-      </section>
       <!-- ================ SUBSCRIBE ================== -->
-      <section class="subscribe section" id="subscribe">
+      <section class="subscribe">
         <div class="subscribe__bg">
           <div class="subscribe__content">
-            <h2 class="section__title subscribe__title">Subscribe Our <br> Newsletter</h2>
-            <p class="subscribe__description">Subscribe to our newsletter and get a special 40% discount</p>
-            <form action="" class="subscribe__form">
-              <input type="text" placeholder="Enter email" class="subscribe__input">
-              <button class="button">Subscribe</button>
-            </form>
+            <h2 class="section__title subscribe__title">
+              此 网 站 <br />
+              仅献予我的梦中情人
+            </h2>
+            <div class="social">
+              <a
+                href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1752809438"
+                target="class"
+                class="home__social-link"
+                ><i class="ri-qq-fill"></i
+              ></a>
+              <i id="footerWechat" class="ri-wechat-fill home__social-link"></i>
+              <a href="mailto:1752809438@qq.com" class="home__social-link"
+                ><i class="ri-mail-unread-fill"></i
+              ></a>
+            </div>
+            <p class="subscribe__description">
+              This site is only for the man of my dreams
+            </p>
+            <footer class="footer">
+              <div class="footer__container container grid">
+                <div class="footer__rights">
+                  <p class="footer__copy">
+                    &#169; 2022 fwtang.All rigths reserved
+                  </p>
+                  <div class="footer__terms">
+                    <a href="#" class="footer__terms-link"
+                      >Terms & Agreements</a
+                    >
+                    <a href="#" class="footer__terms-link">Privacy Policy</a>
+                  </div>
+                </div>
+              </div>
+            </footer>
           </div>
         </div>
       </section>
       <!-- ================== SPONSORS ================ -->
-      <section class="sponsor section" id="sponsor">
+      <!-- <section class="sponsor section" id="sponsor">
         <div class="sponsor__container container grid">
           <div class="sponsor__content">
-              <img src="https://img.icons8.com/stickers/100/000000/weixing.png" alt="" class="sponsor__img">
+            <img
+              src="https://img.icons8.com/stickers/100/000000/weixing.png"
+              alt=""
+              class="sponsor__img"
+            />
           </div>
           <div class="sponsor__content">
-            <img src="https://img.icons8.com/color/100/000000/qq.png" alt="" class="sponsor__img">
+            <img
+              src="https://img.icons8.com/color/100/000000/qq.png"
+              alt=""
+              class="sponsor__img"
+            />
           </div>
           <div class="sponsor__content">
-            <img src="https://img.icons8.com/stickers/100/000000/gmail.png" alt="" class="sponsor__img">
+            <img
+              src="https://img.icons8.com/stickers/100/000000/gmail.png"
+              alt=""
+              class="sponsor__img"
+            />
           </div>
           <div class="sponsor__content">
-            <img src="https://img.icons8.com/stickers/100/000000/youtube.png" alt="" class="sponsor__img">
+            <img
+              src="https://img.icons8.com/stickers/100/000000/youtube.png"
+              alt=""
+              class="sponsor__img"
+            />
           </div>
           <div class="sponsor__content">
-            <img src="https://img.icons8.com/stickers/100/000000/weibo.png" alt="" class="sponsor__img">
+            <img
+              src="https://img.icons8.com/stickers/100/000000/weibo.png"
+              alt=""
+              class="sponsor__img"
+            />
           </div>
         </div>
-      </section>
+      </section> -->
     </main>
     <!-- ========================== FOOTER ============================== -->
-    <footer class="footer section">
-      <div class="footer__container container grid">
-        <div class="footer__content grid">
-          <div class="footer__data">
-            <h3 class="footer__title">Travel</h3>
-            <p class="footer__description">Travel you choose the <br> destination,we offer you the <br> experience.</p>
-            <div>
-              <a href="https://www.facebook.com/" target="_blank" class="footer__social"><i class="ri-facebook-box-fill"></i></a>
-              <a href="https://twitter.com/" target="_blank" class="footer__social"><i class="ri-twitter-fill"></i></a>
-              <a href="https://www.instagram.com/" target="_blank" class="footer__social"><i class="ri-instagram-fill"></i></a>
-              <a href="https://www.youtube.com/" target="_blank" class="footer__social"><i class="ri-youtube-fill"> </i></a>
-            </div>
-          </div>
-          <div class="footer__data">
-            <h3 class="footer__subtitle">About</h3>
-            <ul>
-              <li class="footer__item"><a href="#" class="footer__link">About Us</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Features</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">New & Blog</a></li>
-            </ul>
-          </div>
-          <div class="footer__data">
-            <h3 class="footer__subtitle">Company</h3>
-            <ul>
-              <li class="footer__item"><a href="#" class="footer__link">Team</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Plan y Pricing</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Become a member</a></li>
-            </ul>
-          </div>
-          <div class="footer__data">
-            <h3 class="footer__subtitle">Support</h3>
-            <ul>
-              <li class="footer__item"><a href="#" class="footer__link">FAQs</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Support Center</a></li>
-              <li class="footer__item"><a href="#" class="footer__link">Contact Us</a></li>
-            </ul>
-          </div>
-        </div>
-        <div class="footer__rights">
-          <p class="footer__copy">&#169; 2022 fwtang.All rigths reserved</p>
-          <div class="footer__terms">
-            <a href="#" class="footer__terms-link">Terms & Agreements</a>
-            <a href="#" class="footer__terms-link">Privacy Policy</a>
-          </div>
-        </div>
-      </div>
-    </footer>
+
     <!-- ========================== SCROLL UP ============================== -->
     <a href="#" class="scrollup" id="scroll-up">
       <i class="ri-arrow-up-line scrollup__icon"></i>
     </a>
 
     <!-- ========================== SCROLL REVEAL ============================== -->
-
+    <script src="./assets/js/scrollreveal.min.js"></script>
     <!-- ========================== SWIPER JS ============================== -->
-    <script src="./assets/js/swiper-bundle.min.js"></script>
-
+    <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
     <!-- ========================== MAIN JS ============================== -->
     <script src="./assets/js/main.js"></script>
   </body>

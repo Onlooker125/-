@@ -170,7 +170,7 @@ p {
   display: flex;
 }
 .explore-content {
-  width: 50%;
+  width: 100%;
   padding: 50px;
   color: whitesmoke;
   display: flex;
@@ -184,6 +184,7 @@ p {
   margin-bottom: 40px;
 }
 .explore-text p {
+  width: 100%;
   color: #7c7c7c;
   margin-bottom: 5px;
 }
@@ -288,5 +289,19 @@ p {
   }
   .row .col img {
     width: 200px;
+  }
+}
+@media screen and (max-width: 400px) {
+  section{
+    padding: 20px;
+  }
+  .line{
+    width: 172px;
+  }
+  .events-remind{
+    padding: 80px 20px !important;
+  }
+  .explore-content{
+    padding: 0;
   }
 }

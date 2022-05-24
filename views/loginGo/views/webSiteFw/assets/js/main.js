@@ -46,6 +46,24 @@ function scrollHeader() {
   else header.classList.remove("scroll-header")
 }
 window.addEventListener("scroll", scrollHeader)
+/** ================== EXPERIENCE =================== */
+var show_three = document.getElementsByClassName('experience__number')
+var daysComputed = function(time) {
+  var oldTimeFormat = new Date(time.replace(/-/g, '/'));
+  var nowDate = new Date();
+  if(nowDate.getTime() - oldTimeFormat.getTime() > 0) {
+      var times = nowDate.getTime() - oldTimeFormat.getTime();
+      var days = parseInt(times / (60*60*24*1000));
+      return days;
+  } else {
+      throw('传入时间不能大于当前日期');
+  }
+}
+// 修改第二个
+show_three[1].innerHTML = daysComputed('2022-02-19')
+// 修改第三个
+show_three[2].innerHTML = daysComputed('2014-10-10')
+
 
 /** ================ SWIPER DISCOVER ================ */
 var swiper = new Swiper(".discover__container", {
@@ -158,7 +176,8 @@ const sr = ScrollReveal({
 })
 sr.reveal(`.home__data, .home__social-link, .home__info, .discover__container,
            .experience__data, .experience__overlay, .place__card, .sponsor__content,
-           .footer__data, .footer__rights, .subscribe__title`, {
+           .footer__data, .footer__rights, .subscribe__title,
+           .section__title`, {
   origin: 'top',
   interval: 100,
 })

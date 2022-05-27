@@ -648,6 +648,10 @@ p {
   #hero .hero div {
     padding-top: 440px;
   }
+  .swiper{
+    width: 320px;
+    height: 140px;
+  }
 }
 @media only screen and (max-width: 1200px) {
   /* 登录框，已经换成链接 */

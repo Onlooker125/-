@@ -19,12 +19,20 @@ a {
 .swiper {
   width: 100%;
   height: 100%;
+  position: relative;
+  box-sizing: border-box;
+  z-index: 1;
+  margin-left: auto;
+  margin-right: auto;
+}
+#home {
+  height: 100vh;
 }
 
 .swiper-slide {
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: rgb(131, 131, 131);
   /* Center slide text vertically */
   display: -webkit-box;
   display: -ms-flexbox;
@@ -45,29 +53,26 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  filter: blur(16px);
 }
-
-.swiper {
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .swiper-title {
   position: absolute;
   color: #fff;
-  font-size: 4rem;
+  font-size: 4.6rem;
   font-weight: 800;
+  letter-spacing: 1rem;
   left: 200px;
+  z-index: 2;
 }
-section {
+#home {
   height: 100vh;
 }
 
 /* ========== SHADE ============ */
 .shade {
-  width: 100%;
+  width: 100vw;
   height: 100vh;
-  background-color: rgba(255, 255, 255, 0.6);
+  background-color: rgba(0, 0, 0, 0.6);
   position: fixed;
   top: 0;
   left: 0;
@@ -77,8 +82,8 @@ section {
   align-items: center;
   transition: 0.4s ease;
 }
-.shade img {
-  width: 80%;
+.shade .shade-img {
+  width: 500px;
   transition: 0.4s ease;
 }
 /* ========== END SHADE ============ */
@@ -109,7 +114,7 @@ section {
   margin-left: 40px;
 }
 .nav__toggle {
-  font-size: 1.2rem;
+  font-size: 2rem;
   /* 给icon设置光标类型 */
   cursor: pointer;
 }
@@ -130,6 +135,7 @@ section {
 }
 
 .nav__item {
+  font-size: 1.1rem;
   width: 100%;
   height: 50px;
   display: flex;
@@ -154,13 +160,13 @@ section {
   cursor: pointer;
 }
 .nav__photo-clutter {
-  width: 130px;
-  height: 200px;
+  width: 240px;
+  height: 140px;
   background-color: #fafeff;
-  padding-left: 0;
+  padding: 20px 0;
   display: none;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-between;
   align-items: center;
   position: absolute;
   top: 50px;
@@ -220,7 +226,7 @@ section {
   color: hsl(190, 64%, 18%);
 }
 .nav__toggle {
-  padding-right: 20px;
+  padding-right: 40px;
 }
 /* Active link */
 .active-link {
@@ -253,22 +259,25 @@ section {
 }
 .photo_gather .box .photo_list {
   width: 100%;
-  max-height: 490px;
   display: grid;
   /* 定义每一列的列宽 */
-  grid-template-columns: repeat(auto-fill, 220px);
-  /* 定义每一行的行高 */
-  grid-template-rows: repeat(auto-fill, 146px);
+  grid-template-columns: repeat(auto-fill, 170px);
   /* 列间距和列间距：grid-column-gap  grid-row-gap */
   grid-gap: 2px;
-  overflow-x: scroll;
+  align-items: center;
+  justify-content: center;
 }
 .photo_gather .box .photo_list img {
   font-size: 4em;
   justify-content: stretch;
   width: 100%;
+  max-height: 114.66px;
+  object-fit: cover;
 }
 @media screen and (max-width: 767px) {
+  .nav {
+    margin: 16px 0;
+  }
   .nav__menu {
     /* fixed 根据浏览器窗口进行元素定位 */
     position: fixed;
@@ -280,6 +289,23 @@ section {
     box-shadow: -1px 0 4px #0e373f26;
     padding: 3rem;
     transition: 0.4s;
+  }
+  .nav__item {
+    font-size: 1.1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: auto;
+  }
+  .nav__photo-clutter {
+    display: flex;
+    flex-direction: column;
+    position: static;
+    align-items: flex-start;
+    margin: 20px 20px 0 20px;
+  }
+  .nav__photo-clutter li a {
+    font-size: 1.2rem;
   }
 }
 @media screen and (min-width: 768px) {
@@ -336,14 +362,12 @@ section {
     color: hsl(190, 24%, 35%);
   }
 }
-@media screen and (min-width: 1024px) {
-  .nav {
-    margin: 0;
-  }
-}
 @media screen and (max-width: 425px) {
-  section {
-    height: auto;
+  /* section {
+  } */
+  #home {
+    height: 400px;
+    overflow: hidden;
   }
   .nav__menu {
     font-size: 1.3rem;
@@ -352,17 +376,17 @@ section {
     font-size: 1.4rem;
   }
   .nav__item {
-    height: auto;
+    /* height: auto; */
     flex-direction: column;
     align-items: flex-start;
-  }
-  .swiper {
-    height: 46%;
   }
   .swiper-title {
     font-size: 2rem;
     left: 70px;
     top: 160px;
+  }
+  .swiper-slide img {
+    transform: none;
   }
   .swiper-button-next,
   .swiper-button-prev {
@@ -391,8 +415,12 @@ section {
   }
   .photo_gather .box .photo_list {
     /* 定义每一列的列宽 */
-    grid-template-columns: repeat(2, 164px);
+    grid-template-columns: repeat(auto-fill, 86px);
     /* 定义每一行的行高 */
-    grid-template-rows: repeat(auto-fill, 110px);
+    /* grid-template-rows: repeat(auto-fill, 110px); */
+  }
+  .shade .shade-img {
+    width: 300px;
+    transition: 0.4s ease;
   }
 }

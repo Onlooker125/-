@@ -486,6 +486,7 @@ input {
 .discover__description {
   display: block;
   font-size: var(--smaller-font-size);
+  color: #fff;
 }
 .discover__img:hover {
   transform: var(--img-scale);
@@ -546,7 +547,7 @@ input {
 }
 .experience__overlay:nth-child(2) {
   width: 120px;
-  height: 180px;
+  /* height: 180px; */
   position: absolute;
   top: 2rem;
   right: 0;
@@ -961,7 +962,7 @@ input {
   }
   .about__img-two {
     width: 290px;
-    height: 200px;
+    /* height: 200px; */
     object-fit: cover;
   }
   .discover__card {

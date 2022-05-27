@@ -82,7 +82,7 @@ var swiper = new Swiper(".discover__container", {
     el: ".swiper-pagination",
   },
   coverflowEffect: {
-    rotate: 32, //翻页的倾斜
+    rotate: 30, //翻页的倾斜
   },
 })
 
@@ -191,21 +191,57 @@ sr.reveal(`.about__img-overlay, .video__content, .subscribe__form`, {
 
 /** =============== swiper中循环添加图片 ================== */
 var imgArr = [{
-  src: './assets/img/discover1.jpg',
-  title: '臭宝',
-  text: '这是我家臭宝'
+  src: './assets/img/life/1.jpg',
+  title: '2022.5.20',
+  text: '和宝第一个520'
 }, {
-  src: './assets/img/discover2.jpg',
-  title: '臭宝2',
-  text: '这是我家臭宝2'
+  src: './assets/img/life/2.jpg',
+  title: '2022.5.11',
+  text: '一起在动车上'
 }, {
-  src: './assets/img/discover3.jpg',
-  title: '臭宝3',
-  text: '这是我家臭宝3'
+  src: './assets/img/life/3.jpg',
+  title: '2022.5.21',
+  text: '南洋集肆重过520！'
 }, {
-  src: './assets/img/home2.jpg',
-  title: '臭宝4',
-  text: '这是我家臭宝4'
+  src: './assets/img/life/4.jpg',
+  title: '2022.5.21',
+  text: '南洋集肆重过520！'
+},{
+  src: './assets/img/life/5.jpg',
+  title: '2022.4.28',
+  text: '在地铁站给宝买的花花'
+},{
+  src: './assets/img/life/6.jpg',
+  title: '2022.5.20',
+  text: '给宝买的花花'
+},{
+  src: './assets/img/life/7.jpg',
+  title: '2022.2.24',
+},{
+  src: './assets/img/life/8.jpg',
+  title: '2022.4.14',
+  text: '哈哈哈哈巴库'
+},{
+  src: './assets/img/life/9.jpg',
+  title: '2022.2.11',
+},{
+  src: './assets/img/life/10.jpg',
+  title: '2022.2.25',
+},{
+  src: './assets/img/life/11.jpg',
+  title: '2022.2.27',
+},{
+  src: './assets/img/life/12.png',
+  title: '2022.2.24',
+},{
+  src: './assets/img/life/13.jpg',
+  title: '2022.2.24',
+},{
+  src: './assets/img/life/14.jpg',
+  title: '2022.2.24',
+},{
+  src: './assets/img/life/15.jpg',
+  title: '2022.1',
 },]
 var wrapper = document.getElementById('wrapper')
 for (i = 0; i < imgArr.length; i++) {
@@ -222,11 +258,11 @@ for (i = 0; i < imgArr.length; i++) {
   h2.setAttribute('class', 'discover__title')
   h2.innerHTML = imgArr[i].title
   // 文本div中的span
-  var span = document.createElement('span')
-  span.setAttribute('class', 'discover__description')
-  span.innerHTML = imgArr[i].text
+  // var span = document.createElement('span')
+  // span.setAttribute('class', 'discover__description')
+  // span.innerHTML = imgArr[i].text
   textDiv.appendChild(h2)
-  textDiv.appendChild(span)
+  // textDiv.appendChild(span)
   div.appendChild(img)
   div.appendChild(textDiv)
   wrapper.appendChild(div)
